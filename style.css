@@ -657,18 +657,10 @@ strong {
 
 @media (max-width: 400px) {
   .hero__headline { font-size: clamp(1.15rem, 5.5vw, 1.4rem); }
-  .hero__content { padding: 0 1.2 own 2.5rem; }
-  .btn--glass.hero__btn { font-size: 0.65rem; }
-}
-
-/* ============================================================
-   SMALL MOBILE
-============================================================ */
-@media (max-width: 400px) {
-  .hero__headline { font-size: clamp(1.15rem, 5.5vw, 1.4rem); }
   .hero__content { padding: 0 1.25rem 2.5rem; }
   .btn--glass.hero__btn { font-size: 0.65rem; }
 }
+
 
 
 /* ============================================================
@@ -2143,6 +2135,122 @@ strong {
   .btn--large { width: 100%; justify-content: center; }
   .discover__grid { grid-template-columns: 1fr; }
   .discover__card { padding: 1.5rem 1.25rem; }
+}
+
+/* ============================================================
+   17B. MEDIUM-SMALL MOBILE (401px – 520px)
+   Cobre: iPhone SE 3ª gen, Galaxy A14, Moto G, Pixel 6a
+============================================================ */
+@media (min-width: 401px) and (max-width: 520px) {
+  .hero__headline { font-size: clamp(1.22rem, 4.8vw, 1.45rem); }
+  .hero__content  { padding: 0 1.5rem 2.8rem; }
+  .btn--glass.hero__btn { font-size: 0.68rem; padding: 1.15em 1.6em; }
+
+  .discover__grid { gap: 0.75rem; }
+  .discover__card { padding: 1.5rem 1.25rem; }
+
+  .metodo__grid { max-width: 100%; }
+  .metodo__missao-inner { padding: 1.5rem 1.25rem; }
+
+  .preview__device { max-width: min(88vw, 340px); }
+  .preview__scene  { padding: 1.25rem 1rem 2rem; }
+
+  .feedbacks__grid { max-width: 100%; }
+  .mentor__heading-name { font-size: clamp(1.6rem, 9vw, 2.2rem); }
+
+  .inscricao__content { padding-inline: 1rem; }
+  .inscricao__cta-wrap .btn { font-size: 0.63rem !important; padding: 1.15em 1.5em !important; }
+}
+
+/* ============================================================
+   17C. MEDIUM MOBILE (521px – 600px)
+   Cobre: Galaxy S23, Pixel 7, Samsung Galaxy A54
+============================================================ */
+@media (min-width: 521px) and (max-width: 600px) {
+  .hero__headline { font-size: clamp(1.30rem, 4.2vw, 1.55rem); }
+  .hero__content  { padding: 0 2rem 3rem; }
+  .btn--glass.hero__btn { font-size: 0.70rem; max-width: 420px; }
+
+  .discover__grid { max-width: 540px; margin-inline: auto; gap: 0.9rem; }
+
+  .preview__device { max-width: min(85vw, 380px); }
+  .feedbacks__grid { max-width: 540px; }
+
+  .mentor__heading-name { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .inscricao__content   { padding-inline: 1.25rem; }
+}
+
+/* ============================================================
+   17D. LARGE MOBILE / SMALL TABLET (601px – 767px)
+   Cobre: iPhone Plus/Max (428-430), Galaxy S Ultra, Android médio
+============================================================ */
+@media (min-width: 601px) and (max-width: 767px) {
+  .hero__headline { font-size: clamp(1.40rem, 3.6vw, 1.70rem); }
+  .hero__content  { padding: 0 2.5rem 3.5rem; }
+  .btn--glass.hero__btn { font-size: 0.72rem; max-width: 460px; }
+
+  .discover__grid { max-width: 580px; margin-inline: auto; gap: 1rem; }
+  .metodo__grid   { max-width: 540px; }
+  .metodo__missao-inner { padding: 2rem 1.75rem; }
+
+  .preview__device  { max-width: min(80vw, 420px); }
+  .preview__features { max-width: 380px; }
+  .feedbacks__grid  { max-width: 580px; }
+
+  .mentor__heading-name { font-size: clamp(2rem, 7.5vw, 2.6rem); }
+  .mentor__inner { padding-block: clamp(16rem, 58vw, 22rem) clamp(3rem, 5vw, 5rem); }
+
+  .inscricao__content { padding-inline: 2rem; }
+  .inscricao__cta-wrap .btn { font-size: 0.68rem !important; max-width: 400px !important; }
+  .faq__question { font-size: 0.92rem; }
+}
+
+/* ============================================================
+   17E. AJUSTES GERAIS MOBILE — overflow, textos e botões
+============================================================ */
+@media (max-width: 768px) {
+  /* Evita overflow horizontal */
+  .discover, .metodo, .preview, .feedbacks, .faq, .inscricao, .mentor {
+    overflow-x: hidden;
+  }
+
+  /* Botões: nunca ultrapassam a tela */
+  .btn {
+    max-width: 100%;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Limite ch não vira scroll horizontal */
+  .preview__text, .inscricao__text, .metodo__missao-text { max-width: 100%; }
+
+  /* Cards de feedback */
+  .feedback__card { padding: 1.75rem 1.5rem 1.5rem; }
+
+  /* FAQ answer mais alta para mobile (texto quebra mais) */
+  .faq__answer.faq__answer--open { max-height: 520px; }
+
+  /* Oculta quebras de linha decorativas */
+  .br-desktop { display: none; }
+}
+
+/* ============================================================
+   17F. TOUCH — remove hover que causa flash em mobile
+============================================================ */
+@media (hover: none) {
+  .discover__card:hover,
+  .metodo__card:hover,
+  .preview__feature-card:hover,
+  .feedback__card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .btn--primary:hover,
+  .btn--outline:hover,
+  .btn--glass:hover {
+    transform: none;
+  }
 }
 
 /* ============================================================
