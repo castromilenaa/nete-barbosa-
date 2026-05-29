@@ -1459,9 +1459,9 @@ strong {
 /* ---- Cards ---- */
 .feedbacks__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin-inline: auto;
   position: relative; z-index: 1;
 }
@@ -2060,7 +2060,7 @@ strong {
   .preview__eyebrow { justify-content: center; }
 
   /* Feedbacks tablet */
-  .feedbacks__grid { max-width: 680px; }
+  .feedbacks__grid { grid-template-columns: repeat(2, 1fr); max-width: 780px; }
 
   /* Mentor tablet */
   .mentor { min-height: unset; }
